@@ -4,8 +4,7 @@
 }
 
 .header__container {
-   background: rgb(190, 190, 190);
-   background: linear-gradient(180deg, rgba(190, 190, 190, 1) 30%, rgba(252, 252, 252, 1) 100%);
+   background: rgb(204, 204, 204);
 }
 
 .contacts__item {
@@ -167,10 +166,15 @@
    padding: 15px 30px;
    border-radius: 15px;
    font-size: 24px;
+   font-weight: 700;
 }
 
 .signup__online {
    background-color: #5B3CF0;
    color: #fff;
    margin-bottom: 10px;
+}
+
+.signup__call {
+   color: #5B3CF0;
 }

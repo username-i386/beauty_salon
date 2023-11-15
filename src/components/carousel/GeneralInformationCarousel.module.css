@@ -1,0 +1,43 @@
+.item {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.item1 {
+   background-color: #ff0000;
+}
+
+.item2 {
+   background-color: #6a0c0c;
+}
+
+.item3 {
+   background-color: #3d2a2a;
+}
+
+.mainContainer {
+   height: 650px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+}
+
+.window {
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
+}
+
+.allPagesContainer {
+   height: 100%;
+   display: flex;
+   transition: translate;
+   transition-property: transform;
+   transition-duration: 1s;
+   transition-timing-function: ease-in-out;
+}
+
+.arrow {
+   cursor: pointer;
+}
