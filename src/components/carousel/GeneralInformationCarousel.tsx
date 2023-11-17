@@ -30,7 +30,7 @@ export const GeneralInformationCarousel = ({ children }: any) => {
             } else {
                setOffset(0)
             }
-         }, 2000)
+         }, 6000)
       }
    }, [pages, offset]);
 

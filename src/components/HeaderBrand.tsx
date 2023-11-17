@@ -1,3 +1,4 @@
+import { SignUpButtonGroup } from "./SignUpButtonGroup"
 
 
 export const HeaderBrand = () => {
@@ -18,10 +19,7 @@ export const HeaderBrand = () => {
                русский писатель, мыслитель, философ и публицист.
             </p>
          </div>
-         <div className="brand__item signup">
-            <a href="#" className="signup__online">Записаться</a>
-            <a href="#" className="signup__call">Позвонить</a>
-         </div>
+         <SignUpButtonGroup />
       </div>
    )
 }

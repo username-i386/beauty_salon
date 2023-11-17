@@ -1,20 +1,4 @@
-.item {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
 
-.item1 {
-   background-color: #ff0000;
-}
-
-.item2 {
-   background-color: #6a0c0c;
-}
-
-.item3 {
-   background-color: #3d2a2a;
-}
 
 .mainContainer {
    height: 650px;
@@ -41,3 +25,64 @@
 .arrow {
    cursor: pointer;
 }
+
+.item1 {
+   background: url('../../../public/salon.png') center / cover no-repeat;
+}
+
+.item2 {
+   background: url('../../../public/salon_paint.png') center / cover no-repeat;
+}
+
+.item3 {
+   background: url('../../../public/woman_under_water.png') center / cover no-repeat;
+}
+
+.item4 {
+   background: url('../../../public/woman_drawing.png') center / cover no-repeat;
+}
+
+.item5 {
+   background: url('../../../public/woman_front_mirror.png') center / cover no-repeat;
+}
+
+.redTintBackground {
+   background: rgba(255, 0, 0, 0.22);
+   height: 100%;
+   width: 100%;
+   display: flex;
+}
+
+.darkBackground {
+   background: rgba(0, 0, 0, 0.55);
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: start;
+}
+
+.right {
+   justify-content: end;
+   text-align: right;
+}
+
+.itemContent {
+   background: rgb(0 0 0 / 62%);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 35%;
+   height: 100%;
+   padding: 15px;
+}
+
+.itemContent p {
+   color: #FFF;
+   font-family: Lexend Zetta;
+   font-size: 64px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   margin-bottom: 10px;
+}
+

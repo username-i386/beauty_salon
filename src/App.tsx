@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Header } from './components/Header';
 import { CarouselSlides } from './components/carousel/CarouselSlides';
+import { Services } from './components/services/Services';
 
 function App() {
   return (
@@ -9,7 +10,10 @@ function App() {
       <Header />
       <main>
         <CarouselSlides />
-      </main>
+        <div className="container">
+          <Services />
+        </div>
+      </main> 
     </div>
   );
 }
