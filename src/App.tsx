@@ -3,15 +3,17 @@ import './App.css';
 import { Header } from './components/Header';
 import { CarouselSlides } from './components/carousel/CarouselSlides';
 import { Services } from './components/services/Services';
+import { Prices } from './components/prices/Prices';
 
 function App() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <main>
-        <CarouselSlides />
+        {/* <CarouselSlides /> */}
         <div className="container">
-          <Services />
+          {/* <Services /> */}
+          <Prices />
         </div>
       </main> 
     </div>
