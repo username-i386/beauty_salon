@@ -1,16 +1,11 @@
+import { Logotype } from "./Logotype"
 import { SignUpButtonGroup } from "./SignUpButtonGroup"
 
 
 export const HeaderBrand = () => {
    return (
       <div className="header__brand brand container">
-         <div className="brand__item logotype">
-            <div className="logotype__img"></div>
-            <div>
-               <h1 className="logotype__title">AFRODITE</h1>
-               <p className="logotype__subtitle">салон красоты</p>
-            </div>
-         </div>
+         <Logotype />
          <div className="brand__item quote">
             <h2 className="quote__title">Красота спасет мир.</h2>
             <p className="quote__subtitle">

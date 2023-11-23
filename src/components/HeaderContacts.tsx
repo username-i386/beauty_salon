@@ -1,3 +1,5 @@
+import { SocialWAandTG } from "./SocialWAandTG"
+import { VKButton } from "./VKButton"
 
 
 export const HeaderContacts = () => {
@@ -13,12 +15,9 @@ export const HeaderContacts = () => {
                <p className="contacts__phone before-icon">+7 (423) 111-11-11</p>
                <p className="contacts__phone before-icon">+7 (924) 111-11-11</p>
                <div className="dvider"></div>
-               <div className="contacts__social">
-                  <div className="whatsapp before-icon"></div>
-                  <div className="telegram before-icon"></div>
-               </div>
+               <SocialWAandTG />
                <div className="dvider"></div>
-               <p className="contacts__vk before-icon">aphrodite</p>
+               <VKButton />
             </div>
          </div>
       </div>

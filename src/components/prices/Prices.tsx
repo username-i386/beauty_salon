@@ -1,5 +1,40 @@
-import { Box, Button, ButtonGroup, Flex, Card, CardBody,Center, CardFooter, Divider, Grid, GridItem, Heading, Stack, Image, Text } from '@chakra-ui/react'
-const haircutsAndStylingImage = require('../../../public/priceComponent/haircuts_and_styling.png')
+import { Box, 
+   Button, 
+   ButtonGroup, 
+   Flex, 
+   Card, 
+   CardBody,
+   Center, 
+   CardFooter, 
+   Divider, 
+   Grid, 
+   GridItem, 
+   Heading, 
+   Stack, 
+   Image, 
+   Text, 
+   Modal, 
+   ModalBody, 
+   ModalCloseButton,
+   ModalContent, 
+   ModalFooter, 
+   ModalHeader, 
+   ModalOverlay, 
+   useDisclosure } from '@chakra-ui/react'
+
+const HAIRCUTS_AND_STYLING_IMAGE = require('../../../public/priceComponent/haircuts_and_styling.png');
+const HAIR_COLORING_IMAGE = require('../../../public/priceComponent/hair_coloring.png');
+const HAIR_CARE_IMAGE = require('../../../public/priceComponent/hair_care.png');
+const MANICURE_IMAGE = require('../../../public/priceComponent/manicure.png');
+const EYELASH_EXTENSIONS = require('../../../public/priceComponent/eyelash_extensions.png'); 
+const PERMANENT_MAKEUP_IMAGE = require('../../../public/priceComponent/permanent_makeup.png'); 
+const SOLARIUM_IMAGE = require('../../../public/priceComponent/solarium.png');
+const COSMETOLOGY_IMAGE = require('../../../public/priceComponent/сosmetology.png');
+const DEPILATION_IMAGE = require('../../../public/priceComponent/depilation.png');
+const MASSAGE_IMAGE = require('../../../public/priceComponent/massage.png');
+const SCRABBING_IMAGE = require('../../../public/priceComponent/scrubbing.png'); 
+const EYEBROW_CORRECTION_IMAGE = require('../../../public/priceComponent/eyebrow_correction.png'); 
+
 export const Prices = () => {
 
    interface IServices {
@@ -10,73 +45,73 @@ export const Prices = () => {
    }
    const services: IServices[] = [
       {
-         image: { url: haircutsAndStylingImage, alt: 'Стрижки и  укладки' },
+         image: { url: HAIRCUTS_AND_STYLING_IMAGE, alt: 'Стрижки и  укладки' },
          title: 'Стрижки и  укладки',
          discription: 'Различные виды стрижек, от классических до креативных, а также укладки на любой случай.',
          ceil: '800'
       },
       {
-         image: { url: haircutsAndStylingImage, alt: 'Окрашивание волос' },
+         image: { url: HAIR_COLORING_IMAGE, alt: 'Окрашивание волос' },
          title: 'Окрашивание волос:',
          discription: 'Все виды окрашивания, от однотонного до сложного колорирования.',
          ceil: '800'
       },
       {
-         image: { url: haircutsAndStylingImage, alt: 'Уход за волосами' },
+         image: { url: HAIR_CARE_IMAGE, alt: 'Уход за волосами' },
          title: 'Уход за волосами:',
          discription: 'Разнообразные маски, пилинги и процедуры для восстановления и укрепления волос.',
          ceil: '800'
       },
       {
-         image: { url: haircutsAndStylingImage, alt: 'Маникюр и педикюр' },
+         image: { url: MANICURE_IMAGE, alt: 'Маникюр и педикюр' },
          title: 'Маникюр и педикюр:',
          discription: 'Классический, аппаратный, европейский, японский, спа-маникюр и педикюр.',
          ceil: '800'
       },
       {
-         image: { url: haircutsAndStylingImage, alt: 'Наращивание и ламинирование ресниц' },
+         image: { url: EYELASH_EXTENSIONS, alt: 'Наращивание и ламинирование ресниц' },
          title: 'Наращивание и ламинирование ресниц:',
          discription: 'Создание выразительного взгляда с помощью наращивания и ламинирования ресниц.',
          ceil: '800'
       },
       {
-         image: { url: haircutsAndStylingImage, alt: 'Перманентный макияж' },
+         image: { url: PERMANENT_MAKEUP_IMAGE, alt: 'Перманентный макияж' },
          title: 'Перманентный макияж:',
          discription: 'Татуаж бровей, губ и глаз, а также микроблейдинг.',
          ceil: '800'
       },
       {
-         image: { url: haircutsAndStylingImage, alt: 'Солярий' },
+         image: { url: SOLARIUM_IMAGE, alt: 'Солярий' },
          title: 'Солярий: ',
          discription: 'Получение ровного и здорового загара.',
          ceil: '800'
       },
       {
-         image: { url: haircutsAndStylingImage, alt: 'Косметология' },
+         image: { url: COSMETOLOGY_IMAGE, alt: 'Косметология' },
          title: 'Косметология:',
          discription: 'Чистка лица, массаж лица, маски, пилинги, аппаратные процедуры',
          ceil: '800'
       },
       {
-         image: { url: haircutsAndStylingImage, alt: 'Депиляция' },
+         image: { url: DEPILATION_IMAGE, alt: 'Депиляция' },
          title: 'Депиляция: ',
          discription: 'Удаление нежелательных волос на различных участках тела.',
          ceil: '800'
       },
       {
-         image: { url: haircutsAndStylingImage, alt: 'Массаж' },
+         image: { url: MASSAGE_IMAGE, alt: 'Массаж' },
          title: 'Массаж:',
          discription: 'Различные виды массажа, от классического до экзотических.',
          ceil: '800'
       },
       {
-         image: { url: haircutsAndStylingImage, alt: 'Обертывания и скрабирование' },
+         image: { url: SCRABBING_IMAGE, alt: 'Обертывания и скрабирование' },
          title: 'Обертывания и скрабирование:',
          discription: 'Процедуры для коррекции фигуры и улучшения состояния кожи.',
          ceil: '800'
       },
       {
-         image: { url: haircutsAndStylingImage, alt: 'Коррекция и окрашивание бровей' },
+         image: { url: EYEBROW_CORRECTION_IMAGE, alt: 'Коррекция и окрашивание бровей' },
          title: 'Коррекция и окрашивание бровей:',
          discription: 'Создание идеальных бровей с учетом формы лица и цвета волос.',
          ceil: '800'
@@ -89,7 +124,7 @@ export const Prices = () => {
          <Heading as={'h2'} textAlign={'center'} color={'white'}>
             Цены:
          </Heading>
-         <Grid gridTemplateColumns={'repeat(3, 1fr)'}>
+         <Grid gridTemplateColumns={'repeat(4, 1fr)'}>
             {
                services.map((element, index) => {
                   return (
