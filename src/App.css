@@ -4,14 +4,15 @@
 }
 
 .header__container {
-   background: rgb(204, 204, 204);
+   background: rgb(175 134 255);
 }
 
 .contacts__item {
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
    align-items: center;
    font-size: 14px;
+   flex-wrap: wrap;
 }
 
 .dvider {
@@ -25,11 +26,13 @@
    display: flex;
    justify-content: space-between;
    padding: 10px;
+   flex-wrap: wrap;
 }
 
 .before-icon {
    display: flex;
    align-items: center;
+   margin: 0 15px;
 }
 
 .before-icon::before {
@@ -48,9 +51,8 @@
    background: url('../public/time_clock_icon.svg') center no-repeat;
 }
 
-
-.contacts__phone {
-   margin: 0 15px;
+.contacts__phone:hover {
+   text-decoration: underline;
 }
 
 .contacts__phone::before {
@@ -59,12 +61,22 @@
 
 .contacts__social {
    display: flex;
+   cursor: pointer;
+}
+
+.whatsapp::before,
+.telegram::before {
+   content: '';
+   display: inline-block;
+   width: 17px;
+   height: 17px;
+   margin-right: 5px;
 }
 
 .whatsapp::before {
    background: url('../public/whatsapp_icon.svg') center no-repeat;
-   width: 35px;
-   height: 35px;
+   width: 30px;
+   height: 30px;
 }
 
 .telegram::before {
@@ -74,15 +86,43 @@
 }
 
 .contacts__vk {
-   background-color: #4C75A3;
+   background-color: #5181b8;
    border-radius: 15px;
    color: #fff;
    padding: 10px 20px;
    font-weight: 700;
+   display: flex;
+   align-items: flex-end;
 }
 
 .contacts__vk::before {
    background: url('../public/vk_icon.svg') center no-repeat;
+}
+
+@media (max-width: 942px) {
+   .header__contacts {
+      justify-content: center;
+   }
+
+   .header__contacts .contacts__item:first-child {
+      margin-bottom: 15px;
+   }
+}
+
+@media (max-width: 482px) {
+   .dvider {
+      display: none;
+   }
+}
+
+@media (max-width: 358px) {
+   .before-icon {
+      margin: 0;
+   }
+
+   .contacts__phone_numbers {
+      margin: 0 15px;
+   }
 }
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -90,11 +130,17 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 15px 0;
+   padding: 15px 10px;
+   flex-wrap: wrap;
 }
 
-.logotype__img {
+/* .logotype__img {
    background: url('../public/logo.svg');
+   width: 70px;
+   height: 70px;
+   margin-right: 20px;
+} */
+.logotype__img {
    width: 70px;
    height: 70px;
    margin-right: 20px;
@@ -113,28 +159,40 @@
    font-size: 30px;
 }
 
-.logotype__subtitle {
+.logotype__subtitle,
+.logotype__subtitle-white {
    font-size: 13px;
    text-align: center;
 }
 
-.logotype__subtitle::before, .logotype__subtitle::after  {
+.logotype__subtitle::before, 
+.logotype__subtitle::after  {
    content: '';
    width: 20px;
    height: 2px;
-   background-color: #000000;
    display: inline-block;
+   background-color: #000000;
+}
+
+.logotype__subtitle-white::before,
+.logotype__subtitle-white::after {
+   content: '';
+      width: 20px;
+      height: 2px;
+      display: inline-block;
+   background-color: #ffffff;
 }
 
 .quote {
    flex-direction: column;
    justify-content: start;
-   align-items: start;
+   margin: 20px 20px 30px;
 }
 
 .quote__title {
    margin-bottom: 10px;
    font-style: italic;
+   font-size: 35px;
 }
 
 .quote__title::before, .quote__title::after {
@@ -154,12 +212,14 @@
 
 .quote__subtitle  {
    color: #4a4a4a;
+   font-size: 16px;
 }
 
 .signup {
    flex-direction: column;
 }
 
+.signup button,
 .signup a {
    display: block;
    border: 1px solid #5B3CF0;
@@ -169,6 +229,7 @@
    font-weight: 700;
    width: 100%;
    text-align: center;
+   height: 69px;
 }
 
 .signup__online {
@@ -179,4 +240,51 @@
 
 .signup__call {
    color: #5B3CF0;
+}
+
+@media (max-width: 863px) {
+   .brand {
+      flex-direction: column;
+   }
+
+   .quote {
+      margin: 20px 0;
+   }
+}
+
+@media (max-width: 447px) {
+   .quote__title {
+      font-size: 30px;
+   }
+
+   .quote__subtitle {
+      font-size: 15px;
+   }
+}
+
+@media (max-width: 397px) {
+   .quote__title {
+      font-size: 25px;
+   }
+
+   .quote__subtitle {
+      font-size: 14px;
+      text-align: center;
+   }
+
+   .quote__subtitle br {
+      display: none;
+   }
+}
+
+@media (max-width: 307px) {
+   .quote__title {
+      font-size: 20px;
+   }
+
+   .quote__subtitle {
+      font-size: 13px;
+   }
+   
+   
 }

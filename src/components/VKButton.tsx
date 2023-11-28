@@ -1,3 +1,1 @@
-
-
-export const VKButton = () => <p className="contacts__vk before-icon">aphrodite</p>
+export const VKButton = () => <a className="contacts__vk before-icon" href="#">aphrodite</a>

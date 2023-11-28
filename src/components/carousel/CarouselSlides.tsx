@@ -25,7 +25,7 @@ export const CarouselSlides = () => {
          </div>
          <div className={styles.item2} >
             <div className={styles.redTintBackground}>
-               <div className={styles.darkBackground + ' ' + styles.right}>
+               <div className={styles.darkBackground}>
                   <div className={styles.itemContent}>
                      <p>
                         СОЗДАДИМ ПРИЧЕСКУ
@@ -52,7 +52,7 @@ export const CarouselSlides = () => {
          </div>
          <div className={styles.item4} >
             <div className={styles.redTintBackground}>
-               <div className={styles.darkBackground + ' ' + styles.right}>
+               <div className={styles.darkBackground}>
                   <div className={styles.itemContent}>
                      <p>
                         БУДЬ

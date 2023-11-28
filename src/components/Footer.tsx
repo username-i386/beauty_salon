@@ -7,16 +7,6 @@ import { VKButton } from "./VKButton"
 
 export const Footer = () => {
 
-   interface ISocialTextAndLink {
-      url: string
-      text: string
-   }
-   const socialTextAndLink: ISocialTextAndLink[] = [
-      { url: '#', text: '+7 (423) 111-11-11' },
-      { url: '#', text: '+7 (924) 111-11-11' },
-      { url: '#', text: 'Записаться' },
-      { url: '#', text: 'Позваонить' },
-   ]
    const aboutUsText: string[] = [
       'рожденная Вашими желаниями!',
       'вдохновленная Вами!',
@@ -33,7 +23,7 @@ export const Footer = () => {
             <Stack direction="row"
                   justifyContent="space-around"
                   alignItems="flex-start">
-               <Logotype />
+               <Logotype color={'#ffffff'} />
                <Stack direction="column"
                   justifyContent="flex-start"
                   alignItems="flex-start"
@@ -64,10 +54,10 @@ export const Footer = () => {
                         divider={<Divider orientation="vertical" flexItem light />}>
                      <Stack direction={'column'} >
                         <Typography variant="subtitle1">
-                           +7 (423) 111-11-11
+                           <a href="tel:+74231111111" className="contacts__phone">+7 (423) 111-11-11</a>
                         </Typography>
                         <Typography variant="subtitle1">
-                           +7 (924) 111-11-11
+                           <a href="tel:+79241111111" className="contacts__phone">+7 (924) 111-11-11</a>
                         </Typography>
                      </Stack>
                      <Stack direction={'column'}>

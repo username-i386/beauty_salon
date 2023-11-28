@@ -1,26 +1,15 @@
 import { Box, 
    Button, 
-   ButtonGroup, 
-   Flex, 
    Card, 
    CardBody,
    Center, 
    CardFooter, 
    Divider, 
    Grid, 
-   GridItem, 
    Heading, 
    Stack, 
    Image, 
-   Text, 
-   Modal, 
-   ModalBody, 
-   ModalCloseButton,
-   ModalContent, 
-   ModalFooter, 
-   ModalHeader, 
-   ModalOverlay, 
-   useDisclosure } from '@chakra-ui/react'
+   Text,  } from '@chakra-ui/react'
 
 const HAIRCUTS_AND_STYLING_IMAGE = require('../../../public/priceComponent/haircuts_and_styling.png');
 const HAIR_COLORING_IMAGE = require('../../../public/priceComponent/hair_coloring.png');
@@ -120,21 +109,37 @@ export const Prices = () => {
    ]
 
    return(
-      <Box p={25} bg='blue.500'>
-         <Heading as={'h2'} textAlign={'center'} color={'white'}>
-            Цены:
-         </Heading>
-         <Grid gridTemplateColumns={'repeat(4, 1fr)'}>
+      <Box bg='blue.500'>
+         <Center>
+            <Heading as={'h2'}
+               textAlign={'center'}
+               color='blue.500'
+               bg='white'
+               p={'30px'}
+               borderRadius={15} >
+               Услуги салона красоты:
+            </Heading>
+         </Center>
+         <Grid 
+            gridTemplateColumns={'repeat(auto-fit, minmax(320px, 1fr))'} 
+            gap={'15px'}
+            p={'15px'}>
             {
                services.map((element, index) => {
                   return (
-                     <Card maxW='sm' borderRadius={25} m={5} key={index}>
-                        <CardBody>
-                           <Image
-                              src={element.image.url}
-                              alt={element.image.alt}
-                              borderRadius='lg'
-                           />
+                     <Card maxW='sm' borderRadius={25} key={index}>
+                        <CardBody >
+                           <Box display={'inline-block'} overflow={'hidden'}>
+                              <Image
+                                 src={element.image.url}
+                                 alt={element.image.alt}
+                                 borderRadius='lg'
+                                 transition={'1s'}
+                                 display={'block'}
+                                 _hover={{
+                                    transform: "scale(1.5)",
+                                 }} />
+                           </Box>
                            <Stack mt='6' spacing='3' >
                               <Heading size='md'>
                                  {element.title}

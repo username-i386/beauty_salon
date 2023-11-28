@@ -3,8 +3,8 @@
 export const SocialWAandTG = () => {
    return (
       <div className="contacts__social">
-         <div className="whatsapp before-icon"></div>
-         <div className="telegram before-icon"></div>
+         <a className="whatsapp " href="#"></a>
+         <a className="telegram " href="#"></a>
       </div>
    )
 }

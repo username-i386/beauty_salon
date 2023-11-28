@@ -5,13 +5,13 @@ import { SignUpButtonGroup } from "./SignUpButtonGroup"
 export const HeaderBrand = () => {
    return (
       <div className="header__brand brand container">
-         <Logotype />
+         <Logotype color={'#000000'} />
          <div className="brand__item quote">
             <h2 className="quote__title">Красота спасет мир.</h2>
             <p className="quote__subtitle">
-               Федор Михайлович Достоевский (1821-1881), 
+               <span>Федор Михайлович Достоевский (1821-1881), </span>
                <br/>
-               русский писатель, мыслитель, философ и публицист.
+               <span>русский писатель, мыслитель, философ и публицист.</span>
             </p>
          </div>
          <SignUpButtonGroup />

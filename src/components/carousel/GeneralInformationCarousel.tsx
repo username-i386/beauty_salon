@@ -24,9 +24,9 @@ export const GeneralInformationCarousel = ({ children }: any) => {
    useEffect(() => {
       if (pages.length > 0) {
          setTimeout(() => {
-            const maxOffset = -(window.innerWidth * (pages.length - 1));
+            const maxOffset = -(document.documentElement.scrollWidth * (pages.length - 1));
             if (offset > maxOffset) {
-               setOffset(currentOffset => currentOffset - window.innerWidth);
+               setOffset(currentOffset => currentOffset - document.documentElement.scrollWidth);
             } else {
                setOffset(0)
             }

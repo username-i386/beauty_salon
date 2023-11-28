@@ -12,8 +12,10 @@ export const HeaderContacts = () => {
                <p className="contacts__time before-icon">Пн-Вс 8:00-20:00</p>
             </div>
             <div className="contacts__item">
-               <p className="contacts__phone before-icon">+7 (423) 111-11-11</p>
-               <p className="contacts__phone before-icon">+7 (924) 111-11-11</p>
+               <div className="contacts__phone_numbers">
+                  <a href="tel:+74231111111" className="contacts__phone before-icon">+7 (423) 111-11-11</a>
+                  <a href="tel:+79241111111" className="contacts__phone before-icon">+7 (924) 111-11-11</a>
+               </div>
                <div className="dvider"></div>
                <SocialWAandTG />
                <div className="dvider"></div>
