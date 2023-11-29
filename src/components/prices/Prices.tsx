@@ -9,7 +9,9 @@ import { Box,
    Heading, 
    Stack, 
    Image, 
-   Text,  } from '@chakra-ui/react'
+   Text,
+   useMediaQuery,  } from '@chakra-ui/react'
+import { useEffect, useState } from 'react';
 
 const HAIRCUTS_AND_STYLING_IMAGE = require('../../../public/priceComponent/haircuts_and_styling.png');
 const HAIR_COLORING_IMAGE = require('../../../public/priceComponent/hair_coloring.png');
@@ -35,7 +37,7 @@ export const Prices = () => {
    const services: IServices[] = [
       {
          image: { url: HAIRCUTS_AND_STYLING_IMAGE, alt: 'Стрижки и  укладки' },
-         title: 'Стрижки и  укладки',
+         title: 'Стрижки и  укладки:',
          discription: 'Различные виды стрижек, от классических до креативных, а также укладки на любой случай.',
          ceil: '800'
       },
@@ -105,29 +107,35 @@ export const Prices = () => {
          discription: 'Создание идеальных бровей с учетом формы лица и цвета волос.',
          ceil: '800'
       },
+   ];
 
-   ]
+   const [gridItemSize, setGridItemSize] = useState(320);
+   const [isSmallThan370px] = useMediaQuery('(max-width: 370px)');
+
+   useEffect(() => {
+      isSmallThan370px ? setGridItemSize(200) : setGridItemSize(320);
+   }, [isSmallThan370px]);
 
    return(
-      <Box bg='blue.500'>
+      <Box bg='blue.500' p={'10px'}>
          <Center>
             <Heading as={'h2'}
                textAlign={'center'}
                color='blue.500'
                bg='white'
-               p={'30px'}
+               p={'10px 15px'}
                borderRadius={15} >
                Услуги салона красоты:
             </Heading>
          </Center>
          <Grid 
-            gridTemplateColumns={'repeat(auto-fit, minmax(320px, 1fr))'} 
+            gridTemplateColumns={`repeat(auto-fit, minmax(${gridItemSize}px, 1fr))`} 
             gap={'15px'}
             p={'15px'}>
             {
                services.map((element, index) => {
                   return (
-                     <Card maxW='sm' borderRadius={25} key={index}>
+                     <Card borderRadius={25} key={index}>
                         <CardBody >
                            <Box display={'inline-block'} overflow={'hidden'}>
                               <Image

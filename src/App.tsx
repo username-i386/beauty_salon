@@ -14,25 +14,22 @@ const theme = createTheme({})
 function App() {
   return (
     <div>
-      {/* <Header /> */}
+      <Header /> 
       <main>
-        {/* <CarouselSlides /> */}
+        <CarouselSlides />
         <div >
           <Prices />
-          {/* <Promotion /> 
+          <Promotion /> 
           <YMaps query={{
-            apikey: "45b1a2c0-34ae-4c78-80da-77dc72b878fb",
             ns: "use-load-option",
-            load: "Map,Placemark,control.ZoomControl,control.FullscreenControl,geoObject.addon.balloon",
-            
-          }}>
+            load: "Map,Placemark,control.ZoomControl,control.FullscreenControl,geoObject.addon.balloon",}}>
             <SearchUs />
-          </YMaps> */}
+          </YMaps>
         </div>
       </main>
-      {/* <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <Footer />
-      </ThemeProvider> */}
+      </ThemeProvider>
     </div>
   );
 }

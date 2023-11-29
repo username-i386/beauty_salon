@@ -1,0 +1,42 @@
+
+
+.search-us {
+   @apply flex flex-row justify-around items-center;
+}
+
+.search-us__info {
+   @apply w-full p-3 flex flex-col h-full items-center text-center;
+}
+
+.search-us__info p:nth-child(3) {
+   @apply mb-7;
+}
+
+.info__title {
+   @apply font-bold text-5xl mb-8;
+}
+
+.info__btns {
+   @apply flex flex-row mt-6 items-center;
+}
+
+@media(max-width: 970px) {
+   .search-us {
+      @apply flex-wrap;
+   }
+}
+
+@media(max-width: 370px) {
+   .info__title {
+      @apply text-3xl mb-4;
+   }
+
+   .search-us__info p {
+      @apply text-sm;
+   }
+
+   .search-us__info p:nth-child(3) {
+      @apply mb-3;
+   }
+}
+

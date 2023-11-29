@@ -1,10 +1,5 @@
-import { useState } from "react";
-import styled from "styled-components"
-import { SlArrowDown, SlArrowUp } from "react-icons/sl";
-
-const womanCardAvatar = require('../../../public/woman_services_avatar.png');
-const manCardAvatar = require('../../../public/man_services_avatar.png');
-const kidCardAvatar = require('../../../public/kid_services_avatar.png');
+import { useMediaQuery } from "@chakra-ui/react";
+import styled from "styled-components";
 
 const ServicesDiv = styled.div`
    padding: 20px;
@@ -14,15 +9,16 @@ const ServicesDiv = styled.div`
    align-items: center;
 `
 
-const Title = styled.h2`
+const Title = styled.h2<{size: boolean}>`
    text-transform: uppercase;
    text-align: center;
-   font-size: 56px;
+   font-size: ${({ size }) => size ? '40px' : '56px'};
    margin: 0 0 30px;
 `
-const Container = styled.div`
+
+const Container = styled.div<{size: boolean}>`
    display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: ${({ size }) => (size ? '1fr' : 'repeat(auto-fit, minmax(500px, 1fr))' )};
    align-items: stretch;
    gap: 15px;
 `
@@ -38,13 +34,13 @@ const Card = styled.div`
 `
 
 const TitleCard = styled(Title)`
-   font-size: 24px;
+   font-size: ${({ size }) => size ? '20px' : '24px;'};
    margin: 10px 0;
    font-weight: bold;
 `
 
-const SubtitleCard = styled.p`
-   font-size: 20px;
+const SubtitleCard = styled.p<{size: boolean}>`
+   font-size: ${({ size }) => size ? '16px' : '20px;'};
    text-transform: lowercase;
    text-align: center;
 `
@@ -90,18 +86,24 @@ export const Promotion = () => {
          subtitle: 'Каждый понедельник, семейные пакеты услуг со скидками.',
       },
    ]
+
+   const [isSmallerThan556px] = useMediaQuery('(max-width: 556px)');
    
    return (
       <ServicesDiv>
          <div className="container">
-            <Title>Акции для наших клиентов:</Title>
-            <Container>
+            <Title size={isSmallerThan556px}>
+               Акции для наших клиентов:
+            </Title>
+            <Container size={isSmallerThan556px}>
                {
                   promotionCardInfo.map((element: IPromotionCardInfo, index: number) => {
                      return (
                         <Card key={index}>
-                           <TitleCard>{element.title}</TitleCard>
-                           <SubtitleCard>
+                           <TitleCard size={isSmallerThan556px}>
+                              {element.title}
+                           </TitleCard>
+                           <SubtitleCard size={isSmallerThan556px}>
                               {element.subtitle}
                            </SubtitleCard>
                         </Card>
