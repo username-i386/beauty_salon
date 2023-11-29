@@ -13,18 +13,18 @@ import { Box,
    useMediaQuery,  } from '@chakra-ui/react'
 import { useEffect, useState } from 'react';
 
-const HAIRCUTS_AND_STYLING_IMAGE = require('../../../public/priceComponent/haircuts_and_styling.png');
-const HAIR_COLORING_IMAGE = require('../../../public/priceComponent/hair_coloring.png');
-const HAIR_CARE_IMAGE = require('../../../public/priceComponent/hair_care.png');
-const MANICURE_IMAGE = require('../../../public/priceComponent/manicure.png');
-const EYELASH_EXTENSIONS = require('../../../public/priceComponent/eyelash_extensions.png'); 
-const PERMANENT_MAKEUP_IMAGE = require('../../../public/priceComponent/permanent_makeup.png'); 
-const SOLARIUM_IMAGE = require('../../../public/priceComponent/solarium.png');
-const COSMETOLOGY_IMAGE = require('../../../public/priceComponent/сosmetology.png');
-const DEPILATION_IMAGE = require('../../../public/priceComponent/depilation.png');
-const MASSAGE_IMAGE = require('../../../public/priceComponent/massage.png');
-const SCRABBING_IMAGE = require('../../../public/priceComponent/scrubbing.png'); 
-const EYEBROW_CORRECTION_IMAGE = require('../../../public/priceComponent/eyebrow_correction.png'); 
+const HAIRCUTS_AND_STYLING_IMAGE = require('../../../public/haircuts_and_styling.png');
+const HAIR_COLORING_IMAGE = require('../../../public/hair_coloring.png');
+const HAIR_CARE_IMAGE = require('../../../public/hair_care.png');
+const MANICURE_IMAGE = require('../../../public/manicure.png');
+const EYELASH_EXTENSIONS = require('../../../public/eyelash_extensions.png'); 
+const PERMANENT_MAKEUP_IMAGE = require('../../../public/permanent_makeup.png'); 
+const SOLARIUM_IMAGE = require('../../../public/solarium.png');
+const COSMETOLOGY_IMAGE = require('../../../public/сosmetology.png');
+const DEPILATION_IMAGE = require('../../../public/depilation.png');
+const MASSAGE_IMAGE = require('../../../public/massage.png');
+const SCRABBING_IMAGE = require('../../../public/scrubbing.png'); 
+const EYEBROW_CORRECTION_IMAGE = require('../../../public/eyebrow_correction.png'); 
 
 export const Prices = () => {
 
