@@ -26,23 +26,23 @@
 }
 
 .item1 {
-   background: url('../../../public/salon.png') center / cover no-repeat;
+   background: url('../../images/salon.png') center / cover no-repeat;
 }
 
 .item2 {
-   background: url('../../../public/salon_paint.png') center / cover no-repeat;
+   background: url('../../images/salon_paint.png') center / cover no-repeat;
 }
 
 .item3 {
-   background: url('../../../public/woman_under_water.png') center / cover no-repeat;
+   background: url('../../images/woman_under_water.png') center / cover no-repeat;
 }
 
 .item4 {
-   background: url('../../../public/woman_drawing.png') center / cover no-repeat;
+   background: url('../../images/woman_drawing.png') center / cover no-repeat;
 }
 
 .item5 {
-   background: url('../../../public/woman_front_mirror.png') center / cover no-repeat;
+   background: url('../../images/woman_front_mirror.png') center / cover no-repeat;
 }
 
 .redTintBackground {

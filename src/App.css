@@ -44,11 +44,11 @@
 }
 
 .contacts__addres::before {
-   background: url('../public/location_icon.svg') center no-repeat;
+   background: url('/src/icons/location_icon.svg') center no-repeat;
 }
 
 .contacts__time::before {
-   background: url('../public/time_clock_icon.svg') center no-repeat;
+   background: url('/src/icons/time_clock_icon.svg') center no-repeat;
 }
 
 .contacts__phone:hover {
@@ -56,7 +56,7 @@
 }
 
 .contacts__phone::before {
-   background: url('../public/call_icon.svg') center no-repeat;
+   background: url('/src/icons/call_icon.svg') center no-repeat;
 }
 
 .contacts__social {
@@ -74,13 +74,13 @@
 }
 
 .whatsapp::before {
-   background: url('../public/whatsapp_icon.svg') center no-repeat;
+   background: url('/src/icons/whatsapp_icon.svg') center no-repeat;
    width: 30px;
    height: 30px;
 }
 
 .telegram::before {
-   background: url('../public/telegram_icon.svg') center no-repeat;
+   background: url('/src/icons/telegram_icon.svg') center no-repeat;
    width: 30px;
    height: 30px;
 }
@@ -96,7 +96,7 @@
 }
 
 .contacts__vk::before {
-   background: url('../public/vk_icon.svg') center no-repeat;
+   background: url('/src/icons/vk_icon.svg') center no-repeat;
 }
 
 @media (max-width: 942px) {
@@ -203,11 +203,11 @@
 }
 
 .quote__title::before {
-   background: url('../public/double_quotes_left.svg') center no-repeat;
+   background: url('/src/icons/double_quotes_left.svg') center no-repeat;
 }
 
 .quote__title::after {
-   background: url('../public/double_quotes_right.svg') center no-repeat;
+   background: url('/src/icons/double_quotes_right.svg') center no-repeat;
 }
 
 .quote__subtitle  {

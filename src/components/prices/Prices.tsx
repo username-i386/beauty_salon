@@ -13,18 +13,18 @@ import { Box,
    useMediaQuery,  } from '@chakra-ui/react'
 import { useEffect, useState } from 'react';
 
-const HAIRCUTS_AND_STYLING_IMAGE = require('../../../public/haircuts_and_styling.png');
-const HAIR_COLORING_IMAGE = require('../../../public/hair_coloring.png');
-const HAIR_CARE_IMAGE = require('../../../public/hair_care.png');
-const MANICURE_IMAGE = require('../../../public/manicure.png');
-const EYELASH_EXTENSIONS = require('../../../public/eyelash_extensions.png'); 
-const PERMANENT_MAKEUP_IMAGE = require('../../../public/permanent_makeup.png'); 
-const SOLARIUM_IMAGE = require('../../../public/solarium.png');
-const COSMETOLOGY_IMAGE = require('../../../public/сosmetology.png');
-const DEPILATION_IMAGE = require('../../../public/depilation.png');
-const MASSAGE_IMAGE = require('../../../public/massage.png');
-const SCRABBING_IMAGE = require('../../../public/scrubbing.png'); 
-const EYEBROW_CORRECTION_IMAGE = require('../../../public/eyebrow_correction.png'); 
+const HAIRCUTS_AND_STYLING_IMAGE = require('../../images/haircuts_and_styling.png');
+const HAIR_COLORING_IMAGE = require('../../images/hair_coloring.png');
+const HAIR_CARE_IMAGE = require('../../images/hair_care.png');
+const MANICURE_IMAGE = require('../../images/manicure.png');
+const EYELASH_EXTENSIONS = require('../../images/eyelash_extensions.png'); 
+const PERMANENT_MAKEUP_IMAGE = require('../../images/permanent_makeup.png'); 
+const SOLARIUM_IMAGE = require('../../images/solarium.png');
+const COSMETOLOGY_IMAGE = require('../../images/сosmetology.png');
+const DEPILATION_IMAGE = require('../../images/depilation.png');
+const MASSAGE_IMAGE = require('../../images/massage.png');
+const SCRABBING_IMAGE = require('../../images/scrubbing.png'); 
+const EYEBROW_CORRECTION_IMAGE = require('../../images/eyebrow_correction.png'); 
 
 export const Prices = () => {
 
