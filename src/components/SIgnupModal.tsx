@@ -18,13 +18,7 @@ export const SignupModal = ({ isOpen, onClose, service }: any) => {
    }, [successMessage])
 
    return(
-      <div style={{
-         position: 'fixed',
-         bottom: '50%',
-         left: '50%',
-         transform: 'translate(-50%, 50%)',
-         zIndex: '9999',
-      }}>
+      <div>
          {
             successMessage ?
                <Alert
@@ -36,11 +30,11 @@ export const SignupModal = ({ isOpen, onClose, service }: any) => {
                   textAlign='center'
                   maxWidth='500px'
                   height='200px'
-                  // position={'fixed'}
-                  // bottom={'50%'}
-                  // left={'50%'}
-                  // zIndex={99}
-                  // transform={'translate(-50%, 50%)'}
+                  position={'fixed'}
+                  bottom={'50%'}
+                  left={'50%'}
+                  zIndex={99}
+                  transform={'translate(-50%, 50%)'}
                >
                   <AlertIcon boxSize='40px' mr={0} />
                   <AlertTitle mt={4} mb={1} fontSize='lg'>
