@@ -10,8 +10,10 @@ import { Box,
    Stack, 
    Image, 
    Text,
-   useMediaQuery,  } from '@chakra-ui/react'
+   useMediaQuery,
+   useDisclosure,  } from '@chakra-ui/react'
 import { useEffect, useState } from 'react';
+import { SignupModal } from '../SIgnupModal';
 
 const HAIRCUTS_AND_STYLING_IMAGE = require('../../images/haircuts_and_styling.png');
 const HAIR_COLORING_IMAGE = require('../../images/hair_coloring.png');
@@ -39,19 +41,19 @@ export const Prices = () => {
          image: { url: HAIRCUTS_AND_STYLING_IMAGE, alt: 'Стрижки и  укладки' },
          title: 'Стрижки и  укладки:',
          discription: 'Различные виды стрижек, от классических до креативных, а также укладки на любой случай.',
-         ceil: '800'
+         ceil: '1500'
       },
       {
          image: { url: HAIR_COLORING_IMAGE, alt: 'Окрашивание волос' },
          title: 'Окрашивание волос:',
          discription: 'Все виды окрашивания, от однотонного до сложного колорирования.',
-         ceil: '800'
+         ceil: '1900'
       },
       {
          image: { url: HAIR_CARE_IMAGE, alt: 'Уход за волосами' },
          title: 'Уход за волосами:',
          discription: 'Разнообразные маски, пилинги и процедуры для восстановления и укрепления волос.',
-         ceil: '800'
+         ceil: '1500'
       },
       {
          image: { url: MANICURE_IMAGE, alt: 'Маникюр и педикюр' },
@@ -63,43 +65,43 @@ export const Prices = () => {
          image: { url: EYELASH_EXTENSIONS, alt: 'Наращивание и ламинирование ресниц' },
          title: 'Наращивание и ламинирование ресниц:',
          discription: 'Создание выразительного взгляда с помощью наращивания и ламинирования ресниц.',
-         ceil: '800'
+         ceil: '1800'
       },
       {
          image: { url: PERMANENT_MAKEUP_IMAGE, alt: 'Перманентный макияж' },
          title: 'Перманентный макияж:',
          discription: 'Татуаж бровей, губ и глаз, а также микроблейдинг.',
-         ceil: '800'
+         ceil: '4500'
       },
       {
          image: { url: SOLARIUM_IMAGE, alt: 'Солярий' },
          title: 'Солярий: ',
          discription: 'Получение ровного и здорового загара.',
-         ceil: '800'
+         ceil: '1130'
       },
       {
          image: { url: COSMETOLOGY_IMAGE, alt: 'Косметология' },
          title: 'Косметология:',
          discription: 'Чистка лица, массаж лица, маски, пилинги, аппаратные процедуры',
-         ceil: '800'
+         ceil: '2600'
       },
       {
          image: { url: DEPILATION_IMAGE, alt: 'Депиляция' },
          title: 'Депиляция: ',
          discription: 'Удаление нежелательных волос на различных участках тела.',
-         ceil: '800'
+         ceil: '2500'
       },
       {
          image: { url: MASSAGE_IMAGE, alt: 'Массаж' },
          title: 'Массаж:',
          discription: 'Различные виды массажа, от классического до экзотических.',
-         ceil: '800'
+         ceil: '2800'
       },
       {
          image: { url: SCRABBING_IMAGE, alt: 'Обертывания и скрабирование' },
          title: 'Обертывания и скрабирование:',
          discription: 'Процедуры для коррекции фигуры и улучшения состояния кожи.',
-         ceil: '800'
+         ceil: '4200'
       },
       {
          image: { url: EYEBROW_CORRECTION_IMAGE, alt: 'Коррекция и окрашивание бровей' },
@@ -115,6 +117,28 @@ export const Prices = () => {
    useEffect(() => {
       isSmallThan370px ? setGridItemSize(200) : setGridItemSize(320);
    }, [isSmallThan370px]);
+
+   const { isOpen, onOpen, onClose } = useDisclosure();
+
+   const [service, setService] = useState('');
+
+   function signUpHandler(index: number) {
+      switch(index) {
+         case 0: setService('haircut');     break;
+         case 1: setService('coloring');    break;
+         case 2: setService('care');        break;
+         case 3: setService('manicure');    break;
+         case 4: setService('extensions');  break;
+         case 5: setService('makeup');      break;
+         case 6: setService('solarium');    break;
+         case 7: setService('cosmetology'); break;
+         case 8: setService('depilation');  break;
+         case 9: setService('massage');     break;
+         case 10: setService('wrap');       break;
+         case 11: setService('correction'); break;
+      }
+      onOpen();
+   }
 
    return(
       <Box bg='blue.500' p={'10px'}>
@@ -162,7 +186,7 @@ export const Prices = () => {
                         </CardBody>
                         <Divider />
                         <CardFooter>
-                           <Button variant='solid' colorScheme='blue' w={'100%'}>
+                           <Button variant='solid' colorScheme='blue' w={'100%'} onClick={() => signUpHandler(index)} >
                               Записаться онлайн
                            </Button>
                         </CardFooter>
@@ -171,6 +195,7 @@ export const Prices = () => {
                })
             }
          </Grid>
+         <SignupModal isOpen={isOpen} onClose={onClose} service={service} />
       </Box>
    )
 }

@@ -60,10 +60,10 @@
    justify-content: start;
 }
 
-.right {
+/* .right {
    justify-content: end;
    text-align: right;
-}
+} */
 
 .itemContent {
    background: rgb(0 0 0 / 62%);

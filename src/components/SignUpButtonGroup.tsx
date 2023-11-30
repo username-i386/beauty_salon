@@ -4,9 +4,9 @@ import { SignupModal } from "./SIgnupModal";
 
 
 
-export const SignUpButtonGroup = () => {
+export const SignUpButtonGroup = ({ onOpen }: any) => {
 
-   const { isOpen, onOpen, onClose } = useDisclosure();
+   
    
 
    return (
@@ -15,7 +15,7 @@ export const SignUpButtonGroup = () => {
             <button className="signup__online " onClick={onOpen}>Записаться</button>
             <a href="tel:+79241111111" className="signup__call">Позвонить</a>
          </div>
-         <SignupModal isOpen={isOpen} onClose={onClose} />  
+         {/* <SignupModal isOpen={isOpen} onClose={onClose} />   */}
       </div>
    )
 }

@@ -2,7 +2,7 @@ import { Logotype } from "./Logotype"
 import { SignUpButtonGroup } from "./SignUpButtonGroup"
 
 
-export const HeaderBrand = () => {
+export const HeaderBrand = ({ onOpen }: any) => {
    return (
       <div className="header__brand brand container">
          <Logotype color={'#000000'} />
@@ -14,7 +14,7 @@ export const HeaderBrand = () => {
                <span>русский писатель, мыслитель, философ и публицист.</span>
             </p>
          </div>
-         <SignUpButtonGroup />
+         <SignUpButtonGroup onOpen={onOpen} />
       </div>
    )
 }

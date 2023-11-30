@@ -3,7 +3,7 @@ import { GeneralInformationCarousel } from "./GeneralInformationCarousel"
 import styles from './GeneralInformationCarousel.module.css'
 
 
-export const CarouselSlides = () => {
+export const CarouselSlides = ({ onOpen }: any) => {
    
 
    return (
@@ -18,7 +18,7 @@ export const CarouselSlides = () => {
                         ЛУЧШЕЕ
                         ОБОРУДОВАНИЕ
                      </p>
-                     <SignUpButtonGroup />
+                     <SignUpButtonGroup onOpen={onOpen} />
                   </div>
                </div>
             </div>
@@ -31,7 +31,7 @@ export const CarouselSlides = () => {
                         СОЗДАДИМ ПРИЧЕСКУ
                         ЛЮБОЙ СЛОЖНОСТИ
                      </p>
-                     <SignUpButtonGroup />
+                     <SignUpButtonGroup onOpen={onOpen} />
                   </div>
                </div>
             </div>
@@ -45,7 +45,7 @@ export const CarouselSlides = () => {
                         ДЛЯ
                         КРАСОТЫ И ЗДОРОВЬЯ
                      </p>
-                     <SignUpButtonGroup />
+                     <SignUpButtonGroup onOpen={onOpen} />
                   </div>
                </div>
             </div>
@@ -58,7 +58,7 @@ export const CarouselSlides = () => {
                         БУДЬ
                         ЛУЧШЕЙ ВЕРСИЕЙ СЕБЯ!
                      </p>
-                     <SignUpButtonGroup />
+                     <SignUpButtonGroup onOpen={onOpen} />
                   </div>
                </div>
             </div>
@@ -70,7 +70,7 @@ export const CarouselSlides = () => {
                      <p>
                         БЫТЬ С НАМИ ЗНАЧИТ ЛЮБИТЬ СЕБЯ
                      </p>
-                     <SignUpButtonGroup />
+                     <SignUpButtonGroup onOpen={onOpen} />
                   </div>
                </div>
             </div>

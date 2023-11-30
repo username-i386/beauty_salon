@@ -8,15 +8,20 @@ import { Footer } from './components/Footer';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { YMaps } from '@pbe/react-yandex-maps';
 import { Promotion } from './components/services/Promotion';
+import { SignupModal } from './components/SIgnupModal';
+import { useDisclosure } from '@chakra-ui/react';
 
 const theme = createTheme({})
 
+
+
 function App() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <div>
-      <Header /> 
+    <div  > 
+      <Header onOpen={onOpen} /> 
       <main>
-        <CarouselSlides />
+        <CarouselSlides onOpen={onOpen} />
         <div >
           <Prices />
           <Promotion /> 
@@ -30,6 +35,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Footer />
       </ThemeProvider>
+      <SignupModal isOpen={isOpen} onClose={onClose} />
     </div>
   );
 }

@@ -2,11 +2,11 @@ import { HeaderBrand } from "./HeaderBrand"
 import { HeaderContacts } from "./HeaderContacts"
 
 
-export const Header = () => {
+export const Header = ({ onOpen }: any) => {
    return (
       <header className="header">
          <HeaderContacts />
-         <HeaderBrand />
+         <HeaderBrand onOpen={onOpen} />
       </header>
    )
 }

@@ -2,7 +2,7 @@ import { Alert, AlertDescription, AlertIcon, AlertTitle, Button, FormControl, Fo
 import { useEffect, useState } from "react";
 
 
-export const SignupModal = ({ isOpen, onClose }: any) => {
+export const SignupModal = ({ isOpen, onClose, service }: any) => {
 
    const [successMessage, setSuccessMessage] = useState(false);
 
@@ -17,10 +17,14 @@ export const SignupModal = ({ isOpen, onClose }: any) => {
       }, 4000)
    }, [successMessage])
 
-
-
    return(
-      <div>
+      <div style={{
+         position: 'fixed',
+         bottom: '50%',
+         left: '50%',
+         transform: 'translate(-50%, 50%)',
+         zIndex: '9999',
+      }}>
          {
             successMessage ?
                <Alert
@@ -32,11 +36,11 @@ export const SignupModal = ({ isOpen, onClose }: any) => {
                   textAlign='center'
                   maxWidth='500px'
                   height='200px'
-                  position={'absolute'}
-                  bottom={'50%'}
-                  left={'50%'}
-                  zIndex={100}
-                  transform={'translate(-50%, 50%)'}
+                  // position={'fixed'}
+                  // bottom={'50%'}
+                  // left={'50%'}
+                  // zIndex={99}
+                  // transform={'translate(-50%, 50%)'}
                >
                   <AlertIcon boxSize='40px' mr={0} />
                   <AlertTitle mt={4} mb={1} fontSize='lg'>
@@ -46,7 +50,8 @@ export const SignupModal = ({ isOpen, onClose }: any) => {
                      Наш сотрудник свяжется с Вами в ближайшее время
                   </AlertDescription>
                </Alert>
-               : <Modal closeOnOverlayClick={false} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
+               : 
+               <Modal closeOnOverlayClick={false} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
                   <ModalOverlay />
                   <ModalContent>
                      <ModalHeader>Записаться онлайн</ModalHeader>
@@ -62,19 +67,19 @@ export const SignupModal = ({ isOpen, onClose }: any) => {
                         </FormControl>
                         <FormControl mt={4}>
                            <FormLabel>Какая именно услуга Вас интересует?</FormLabel>
-                           <Select placeholder='Выберите услугу:'>
-                              <option value=''>Стрижки и укладки</option>
-                              <option value=''>Окрашивание волос</option>
-                              <option value=''>Уход за волосами</option>
-                              <option value=''>Маникюр и педикюр</option>
-                              <option value=''>Наращивание и ламинирование ресниц</option>
-                              <option value=''>Перманентный макияж</option>
-                              <option value=''>Солярий</option>
-                              <option value=''>Косметология</option>
-                              <option value=''>Депиляция</option>
-                              <option value=''>Массаж</option>
-                              <option value=''>Обертывания и скрабирование</option>
-                              <option value=''>Коррекция и окрашивание бровей</option>
+                           <Select placeholder='Выберите услугу:' defaultValue={service}>
+                              <option value='haircut'>Стрижки и укладки</option>
+                              <option value='coloring'>Окрашивание волос</option>
+                              <option value='care'>Уход за волосами</option>
+                              <option value='manicure'>Маникюр и педикюр</option>
+                              <option value='extensions'>Наращивание и ламинирование ресниц</option>
+                              <option value='makeup'>Перманентный макияж</option>
+                              <option value='solarium'>Солярий</option>
+                              <option value='cosmetology'>Косметология</option>
+                              <option value='depilation'>Депиляция</option>
+                              <option value='massage'>Массаж</option>
+                              <option value='wrap'>Обертывания и скрабирование</option>
+                              <option value='correction'>Коррекция и окрашивание бровей</option>
                            </Select>
                         </FormControl>
                         <FormControl mt={4}>
