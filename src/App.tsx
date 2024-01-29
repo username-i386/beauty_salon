@@ -1,15 +1,14 @@
-import React from 'react';
 import './App.css';
 import { Header } from './components/Header';
-import { CarouselSlides } from './components/carousel/CarouselSlides';
-import { Prices } from './components/prices/Prices';
-import { SearchUs } from './components/searchUs/SearchUs';
+import { Prices } from './components/Prices';
+import { SearchUs } from './components/SearchUs';
 import { Footer } from './components/Footer';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { YMaps } from '@pbe/react-yandex-maps';
-import { Promotion } from './components/services/Promotion';
+import { Promotion } from './components/Promotion';
 import { SignupModal } from './components/SIgnupModal';
 import { useDisclosure } from '@chakra-ui/react';
+import { MainImage } from './components/MainImage';
 
 const theme = createTheme({})
 
@@ -21,7 +20,7 @@ function App() {
     <div  > 
       <Header onOpen={onOpen} /> 
       <main>
-        <CarouselSlides onOpen={onOpen} />
+        <MainImage onOpen={onOpen} />
         <div >
           <Prices />
           <Promotion /> 

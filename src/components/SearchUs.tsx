@@ -1,6 +1,6 @@
 import { Map, Placemark } from "@pbe/react-yandex-maps"
-import { SocialWAandTG } from "../SocialWAandTG"
-import { VKButton } from "../VKButton"
+import { SocialWAandTG } from "./SocialWAandTG"
+import { VKButton } from "./VKButton"
 import './SearchUs.css'
 
 
