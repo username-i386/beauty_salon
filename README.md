@@ -6,10 +6,10 @@
 [![afrodite preview](https://github.com/username-i386/beauty_salon/blob/master/public/adrodite_PC.png)](https://aphrodite-nu.vercel.app/)
 
 ## Содержание
-* [Технологии]()
-* [To do]()
-* [Motivation]()
-* [Команда проекта]()
+* [Технологии](https://github.com/username-i386/beauty_salon/blob/master/README.md#%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8)
+* [To do](https://github.com/username-i386/beauty_salon/blob/master/README.md#to-do)
+* [Motivation](https://github.com/username-i386/beauty_salon/blob/master/README.md#motivation)
+* [Команда проекта](https://github.com/username-i386/beauty_salon/blob/master/README.md#%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0)
 
 ## Технологии
 ![React](https://img.shields.io/badge/React-286171?style=for-the-badge&logo=react&logoColor=#61DBFB)
